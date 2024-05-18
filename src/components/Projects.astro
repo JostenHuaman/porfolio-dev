@@ -1,0 +1,79 @@
+---
+import HTML from './icons/Html.astro'
+import CSS from './icons/Css.astro'
+import JS from './icons/JavaScript.astro'
+
+
+const TAGS = {
+    HTML: {
+        name: 'HTML',
+        color: 'bg-green text-white',
+        icon : HTML,
+    },
+
+    CSS: {
+        name: 'CSS',
+        color: 'bg-green-500 text-white',
+        icon : CSS,
+    },
+    JS: {
+        name: 'JavaScript',
+        color: 'bg-green-500 text-white',
+        icon : JS,
+    },
+
+}
+
+
+const PROJECTS = [
+    {
+        title: 'Huddle Landing Page with a Single Introductory Section',
+        description: 'This is a challenge from Frontend Mentor. The challenge is to build out this landing page and get it looking as close to the design as possible.',
+        link: 'https://huddle-landing-page-with-single-introductory-section-xi-ten.vercel.app/',
+        github : 'https://github.com/JostenHuaman/huddle-landing-page-with-single-introductory-section',
+        image: '../../public/huddle.webp',
+        
+        tags: [TAGS.HTML,TAGS.CSS,TAGS.JS]
+    },
+    {
+        title: 'Ping coming soon page',
+        description: 'Ping coming soon page challenge from Frontend Mentor. The challenge is to build out this coming soon page and get it looking as close to the design as possible.',
+        link: 'https://ping-coming-soon-page-two-azure.vercel.app/',
+        github : 'https://github.com/JostenHuaman/ping-coming-soon-page',
+        image: '../../public/ping.webp', 
+
+        tags: [TAGS.HTML,TAGS.CSS,TAGS.JS]
+    },
+    {
+        title: 'Lear to code by watching others',
+        description: 'This is a challenge from Frontend Mentor. The challenge is to build out this landing page and get it looking as close to the design as possible.',
+        link: 'https://intro-component-with-signup-form-master-one-indol.vercel.app/',
+        github : 'https://github.com/JostenHuaman/intro-component-with-signup-form-master',
+        image: '../../public/learn.webp',
+
+        tags: [TAGS.HTML,TAGS.CSS,TAGS.JS]
+    }
+]
+---
+
+{
+    PROJECTS.map(({ image,title, description,link,github,tags}) =>(
+        <article class="mb-4">
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <a href={link} target="_blank" class="text-1xl bg-yellow-200/90 text-black rounded-full py-1 px-2 font-bold">Live</a>
+            <a href={github} target="_blank" class="text-1xl bg-yellow-200/90 text-black rounded-full py-1 px-2 ml-2 font-bold">Github</a>
+            <img class=" mt-4 rounded shadow-2xl shadow-white/10" src={image} alt={`Caputra de pantalla del proyectos ${image}`}>
+            <ul class="flex gap-x-2 flex-row">
+                {tags.map((tag) => (
+                    <li>
+                        <span class={`flex justify-center items-center text-center gap-x-1 rounded-full text-xs py-1 px-2 mb-4 mt-4 hover:bg-yellow-200 bg-gray-200 text-black/90`}>
+                            {tag.name}
+                            <tag.icon class="size-4"/>
+                        </span>                        
+                    </li>
+                ))}
+            </ul>
+        </article>
+    ))
+}
