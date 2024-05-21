@@ -1,0 +1,39 @@
+---
+import { date } from "astro/zod";
+import AboutmeItem from "./AboutmeItem.astro";
+const EXPERIENCE = [{
+    title: 'Estudiante de Ingeniería de Software',
+    date: 'Marzo 2022',
+    description: 'Soy estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC), apasionado por la tecnología y el desarrollo de soluciones innovadoras que resuelvan problemas reales, con habilidades en el desarrollo de aplicaciones web y móviles, diseño de interfaces de usuario y experiencia de usuario.' 
+    }, {
+    link: 'https://pregrado.upc.edu.pe/facultad-de-ingenieria/ingenieria-de-software/'
+    }, {
+    title: 'Escuela de Desarrollo Web - Platzi',
+    date: 'Enero 2023',
+    description: 'Completé mi formación en la Escuela de Desarrollo Web de Platzi, donde adquirí habilidades avanzadas en desarrollo front-end y back-end. Durante mi aprendizaje, me especialicé en el uso de tecnologías modernas y metodologías ágiles, lo que me permitió crear aplicaciones web robustas y escalables. Esta experiencia complementa mi formación en Ingeniería de Software, dotándome de una perspectiva práctica y actualizada en el ámbito del desarrollo web. '
+    }, {
+    title: 'Conocimientos en Desarrollo Web',
+    date: 'Marzo 2023',
+    description: 'Tengo conocimientos avanzados en desarrollo web, incluyendo HTML, CSS, JavaScript, React, Node.js, Astro, Tailwind, Bootstrap, Git, GitHub, entre otros. Además, tengo experiencia en el uso de herramientas de diseño y prototipado como Figma y Adobe XD, lo que me permite crear interfaces de usuario atractivas y funcionales. Mi enfoque en el desarrollo web se centra en la creación de aplicaciones modernas y responsivas, que cumplan con los estándares de calidad y usabilidad.'
+    },
+    {
+        title: 'Proyectos de FrontEnd Mentor',
+        date: 'Enero 2024',
+        description: 'Participé en varios desafíos de FrontEnd Mentor, donde pude poner en práctica mis habilidades en desarrollo front-end y diseño de interfaces de usuario. Estos desafíos me permitieron mejorar mis habilidades en HTML, CSS y JavaScript, así como aprender nuevas técnicas y buenas prácticas en el desarrollo web. Al completar estos desafíos, pude crear proyectos de alta calidad y mejorar mi portafolio de trabajos.'
+    }
+];
+
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-4">
+                <AboutmeItem {...experience} />
+            </li>
+        ))
+    }          
+    
+</ol>
+
