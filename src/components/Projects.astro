@@ -5,6 +5,7 @@ import JS from './icons/JavaScript.astro'
 import ASTRO from './icons/Aicon.astro'
 import TAILWIND from './icons/Tailwind.astro'
 import REACT from './icons/React.astro'
+import WORDPRESS from './icons/Wordpress.astro'
 
 
 const TAGS = {
@@ -38,7 +39,13 @@ const TAGS = {
         name: 'React',
         color: 'bg-green-500 text-white',
         icon : REACT,
+    },
+    WORDPRESS: {
+        name: 'Wordpress',
+        color: 'bg-green-500 text-white',
+        icon : WORDPRESS,
     }
+    
 
 }
 
@@ -79,7 +86,24 @@ const PROJECTS = [
         image: '/spotify-clone.png',
 
         tags: [TAGS.HTML,TAGS.CSS,TAGS.JS,TAGS.ASTRO,TAGS.TAILWIND,TAGS.REACT]
+    },
+    {
+        title: 'Antonieta Shop',
+        description: 'Antonieta Shop is an e-commerce website built with wordpress and woocommerce',
+        link: 'https://antonieta.shop',
+        image: '/antonieta.png',
+
+        tags: [TAGS.WORDPRESS, TAGS.HTML , TAGS.CSS, TAGS.JS]
+    },
+    {
+        title: 'German K',
+        description: 'German K is a personal website built with wordpress',
+        link: 'https://germank.com',
+        image: '/germank.png',
+
+        tags: [TAGS.WORDPRESS, TAGS.HTML , TAGS.CSS, TAGS.JS]
     }
+
 ]
 ---
 
